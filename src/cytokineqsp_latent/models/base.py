@@ -1,0 +1,1 @@
+"""Shared dynamical-model interface.."""

@@ -1,0 +1,3 @@
+model: neural_ode
+hidden_width: 16
+hidden_layers: 1
