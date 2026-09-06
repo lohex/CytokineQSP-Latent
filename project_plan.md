@@ -37,11 +37,13 @@ The common interface must support three model families:
 
 ### Dataset
 
-**GSE3183** is used for the early IL-13 response. The available time course includes approximately 0, 4, 12, and 24 hours with roughly three biological replicates per condition and time point.
+**GSE3183** is an Affymetrix GPL96 time-course dataset with 15 A549 lung adenocarcinoma cell-line samples, not primary airway epithelial samples. It contains three replicate-labelled arrays in each observed group: untreated at 0 and 24 hours, and IL-13-treated at 4, 12, and 24 hours. GEO does not document whether the replicates are biological or technical, and it does not report the IL-13 dose or detailed culture protocol.
+
+The incomplete time-by-treatment design means that the 4-hour and 12-hour responses are not paired with time-matched controls. GSE3183 is therefore treated as a feasibility and engineering dataset for early-response dynamics, not as sufficient evidence for identifiable primary-airway kinetics. See [the GSE3183 audit](docs/data_audits/GSE3183.md).
 
 ### Objective
 
-Build the smallest hybrid dynamical model that explains the early transcriptional response while representing uncertainty in the unobserved signaling layer.
+Build the smallest hybrid dynamical model that explains the early transcriptional response while representing uncertainty in the unobserved signaling layer. Biological interpretation and transfer of kinetic parameters require evidence beyond GSE3183.
 
 ### Model
 
@@ -58,12 +60,13 @@ The baseline mechanistic model should use a compact saturating activation and fi
 
 ### Data workflow
 
-1. Download expression and sample metadata from GEO.
+1. Download the raw CEL archive and GEO metadata using the versioned source manifest.
 2. Preserve raw accession-derived files under `data/raw/GSE3183/`.
-3. Harmonize sample identifiers, treatment, time, and replicate annotations.
-4. Perform expression-level quality control and document exclusions.
-5. Derive reproducible gene modules or low-dimensional observations.
-6. Store processed matrices and metadata under `data/processed/phase1/`.
+3. Validate the accession mapping against `data/metadata/GSE3183_samples.csv`.
+4. Normalize all raw CEL files together with a documented algorithm and software version.
+5. Perform expression-level quality control and document exclusions.
+6. Derive reproducible gene modules or low-dimensional observations.
+7. Store processed matrices and metadata under `data/processed/phase1/`.
 
 ### Milestones
 
@@ -85,12 +88,12 @@ The baseline mechanistic model should use a compact saturating activation and fi
 
 ### Validation strategy
 
-Validation must avoid treating genes from the same sample as independent observations. The primary units of resampling are biological replicates and experimental conditions.
+Validation must avoid treating genes from the same sample as independent observations. Until the replicate type is resolved, resampling units are the three replicate-labelled arrays and conclusions must acknowledge their undocumented independence.
 
 Use:
 
-- leave-one-time-point-out prediction where estimable,
-- replicate-level bootstrap intervals,
+- held-out observed groups or replicate-labelled arrays rather than claiming a fully controlled leave-one-time-point-out test,
+- replicate-level bootstrap intervals with an explicit independence caveat,
 - multiple random initializations for latent models,
 - comparison against constant, interpolation, and simple linear-dynamics baselines,
 - parameter-profile or local sensitivity analysis,
@@ -188,6 +191,10 @@ Dataset-specific logic belongs under `src/cytokineqsp_latent/data/datasets/`. Re
 - Tests should include data-schema checks, model shape checks, numerical smoke tests, and at least one end-to-end synthetic recovery test.
 
 ## Decision gates
+
+### Gate 0: Phase 1 dataset suitability
+
+Before interpreting latent states or transferring kinetic parameters, test whether conclusions from GSE3183 are robust to its A549 context, incomplete control grid, and undocumented replicate structure. If no compatible external dataset or orthogonal evidence is available, restrict Phase 1 claims to within-dataset predictive dynamics.
 
 ### Gate 1: Phase 1 observability
 

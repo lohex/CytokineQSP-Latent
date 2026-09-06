@@ -8,15 +8,16 @@ The primary use case is modeling IL-4/IL-13-driven airway epithelial remodeling 
 
 ## Project phases
 
-1. **Phase 1: early response** using GSE3183 to develop and externally constrain a compact hybrid dynamical model of the early IL-13 response.
+1. **Phase 1: early response** using GSE3183 as an A549 cell-line feasibility dataset for a compact model of the early IL-13 response. Its incomplete control grid limits causal and primary-airway interpretation.
 2. **Phase 2: chronic remodeling** using GSE240741 to extend the model with slow remodeling, observation, and donor-population layers.
 
-See [project_plan.md](project_plan.md) for the scientific plan and validation strategy.
+See [project_plan.md](project_plan.md) for the scientific plan and validation strategy. The verified GSE3183 design and limitations are documented in the [Phase 1 data audit](docs/data_audits/GSE3183.md).
 
 ## Repository layout
 
 - `configs/`: phase-specific and model-specific configurations
 - `data/`: raw, intermediate, and processed data locations
+- `docs/data_audits/`: source, design, provenance, and suitability audits
 - `notebooks/`: numbered analyses for both phases
 - `src/cytokineqsp_latent/`: reusable data, modeling, inference, simulation, analysis, and plotting code
 - `tests/`: unit and integration tests

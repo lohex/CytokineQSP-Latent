@@ -1,0 +1,49 @@
+{
+  "accession": "GSE3183",
+  "audit_date": "2026-09-06",
+  "organism": "Homo sapiens",
+  "cell_line": "A549",
+  "assay": "Expression profiling by array",
+  "platform": {
+    "accession": "GPL96",
+    "name": "[HG-U133A] Affymetrix Human Genome U133A Array",
+    "probe_sets": 22283
+  },
+  "sample_count": 15,
+  "source_files": [
+    {
+      "role": "raw_archive",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE3nnn/GSE3183/suppl/GSE3183_RAW.tar",
+      "size_bytes": 56084480,
+      "sha256": "9034aca8b90fae2d2da18e607648ffa10051647bdfddeb324f037ef7cb05ca25",
+      "contents": "15 gzip-compressed CEL files"
+    },
+    {
+      "role": "family_soft",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE3nnn/GSE3183/soft/GSE3183_family.soft.gz",
+      "size_bytes": 9822731,
+      "sha256": "3c36bf4e4a5d05029680e130df0a16367bb4b8eb90c53b857e067ca070b50646"
+    },
+    {
+      "role": "series_matrix",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE3nnn/GSE3183/matrix/GSE3183_series_matrix.txt.gz",
+      "size_bytes": 2617553,
+      "sha256": "d61ebc0edefb0b80f4172f668438a4ed3febb7c223e808b6f56d6834da5ab60d",
+      "note": "File bytes and checksum are retrieval-date specific; GEO regenerated this file on 2026-07-05."
+    }
+  ],
+  "metadata_source": "NCBI GEO family SOFT",
+  "processed_value_provenance": {
+    "columns": ["VALUE", "ABS_CALL"],
+    "value_label": "SIGNAL (See Affymetrix Literature)",
+    "normalization_algorithm": null,
+    "status": "not documented in deposited GEO metadata"
+  },
+  "unresolved_fields": [
+    "IL-13 dose",
+    "treatment vehicle",
+    "culture protocol",
+    "whether a/b/c are biological or technical replicates",
+    "primary publication directly describing this experiment"
+  ]
+}

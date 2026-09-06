@@ -1,0 +1,16 @@
+sample_id,title,condition,time_h,replicate_label,replicate_type,cell_line,organism,platform,raw_file
+GSM47468,PGA-HAH-ctr_0h-1aUA-s2,control,0,a,undocumented,A549,Homo sapiens,GPL96,GSM47468.CEL.gz
+GSM47462,PGA-HAH-ctr_0h-1bUA-s2,control,0,b,undocumented,A549,Homo sapiens,GPL96,GSM47462.CEL.gz
+GSM47472,PGA-HAH-ctr_0h-1cUA-s2,control,0,c,undocumented,A549,Homo sapiens,GPL96,GSM47472.CEL.gz
+GSM47461,PGA-HAH-IL13_4h-1aUA-s2,IL13,4,a,undocumented,A549,Homo sapiens,GPL96,GSM47461.CEL.gz
+GSM47464,PGA-HAH-IL13_4h-1bUA-s2,IL13,4,b,undocumented,A549,Homo sapiens,GPL96,GSM47464.CEL.gz
+GSM47473,PGA-HAH-IL13_4h-1cUA-s2,IL13,4,c,undocumented,A549,Homo sapiens,GPL96,GSM47473.CEL.gz
+GSM47459,PGA-HAH-IL13_12h-1aUA-s2,IL13,12,a,undocumented,A549,Homo sapiens,GPL96,GSM47459.CEL.gz
+GSM47466,PGA-HAH-IL13_12h-1bUA-s2,IL13,12,b,undocumented,A549,Homo sapiens,GPL96,GSM47466.CEL.gz
+GSM47460,PGA-HAH-IL13_12h-1cUA-s2,IL13,12,c,undocumented,A549,Homo sapiens,GPL96,GSM47460.CEL.gz
+GSM47469,PGA-HAH-ctr_24h-1aUA-s2,control,24,a,undocumented,A549,Homo sapiens,GPL96,GSM47469.CEL.gz
+GSM47465,PGA-HAH-ctr_24h-1bUA-s2,control,24,b,undocumented,A549,Homo sapiens,GPL96,GSM47465.CEL.gz
+GSM47470,PGA-HAH-ctr_24h-1cUA-s2,control,24,c,undocumented,A549,Homo sapiens,GPL96,GSM47470.CEL.gz
+GSM47467,PGA-HAH-IL13_24h-1aUA-s2,IL13,24,a,undocumented,A549,Homo sapiens,GPL96,GSM47467.CEL.gz
+GSM47471,PGA-HAH-IL13_24h-1bUA-s2,IL13,24,b,undocumented,A549,Homo sapiens,GPL96,GSM47471.CEL.gz
+GSM47463,PGA-HAH-IL13_24h-1cUA-s2,IL13,24,c,undocumented,A549,Homo sapiens,GPL96,GSM47463.CEL.gz
