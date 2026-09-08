@@ -1,0 +1,101 @@
+{
+  "dataset_id": "moraga2015_phase1",
+  "phase": 1,
+  "purpose": "Receptor-binding, trafficking, and early STAT6 signaling EDA for the first QSP model phase.",
+  "citation": {
+    "authors_short": "Moraga et al.",
+    "year": 2015,
+    "title": "Instructive roles for agonist binding parameters in determining the functional bandwidth of cytokine receptor signaling",
+    "journal": "Science Signaling",
+    "volume": "8",
+    "issue": "402",
+    "article": "ra114",
+    "doi": "10.1126/scisignal.aab2677",
+    "pmid": "26554818",
+    "pmcid": "PMC5568809",
+    "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5568809/"
+  },
+  "files": [
+    {
+      "path": "data/processed/phase1_receptor/moraga2015_binding_kinetics.csv",
+      "role": "Author-reported Table 2 and Table 3 kinetic parameter sets.",
+      "evidence_classes": [
+        "author_reported_measurement",
+        "author_reported_model_parameter"
+      ]
+    },
+    {
+      "path": "data/processed/phase1_receptor/moraga2015_trafficking_parameters.csv",
+      "role": "Author-reported Table 1 model estimates and initial condition.",
+      "evidence_classes": [
+        "author_reported_model_estimate",
+        "author_reported_model_initial_condition"
+      ]
+    },
+    {
+      "path": "data/processed/phase1_receptor/moraga2015_pstat6_digitized.csv",
+      "role": "Approximate bar heights from Figures 5C and 7D.",
+      "evidence_classes": [
+        "digitized_from_published_raster"
+      ]
+    }
+  ],
+  "digitization": [
+    {
+      "figure_panel": "Figure 5C",
+      "image_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/1c55/5568809/c286da392450/nihms893915f5.jpg",
+      "raster_size_px": [
+        741,
+        1050
+      ],
+      "method": "Color-segmented bar-height extraction with axis calibration.",
+      "calibration": {
+        "formula": "value = (baseline_y - bar_top_y) * reference_value / (baseline_y - reference_y)",
+        "baseline_y": 504,
+        "reference_y": 358,
+        "reference_value": 100,
+        "value_unit": "% pSTAT6"
+      }
+    },
+    {
+      "figure_panel": "Figure 7D",
+      "image_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/1c55/5568809/6602381ede0a/nihms893915f7.jpg",
+      "raster_size_px": [
+        800,
+        536
+      ],
+      "method": "Color-segmented bar-height extraction with a separate axis calibration per variant panel.",
+      "calibrations": {
+        "WT": {
+          "baseline_y": 148,
+          "reference_y": 38,
+          "reference_value": 125
+        },
+        "D7": {
+          "baseline_y": 318,
+          "reference_y": 207,
+          "reference_value": 100
+        },
+        "A11": {
+          "baseline_y": 488,
+          "reference_y": 378,
+          "reference_value": 125
+        }
+      },
+      "value_unit": "% pSTAT6"
+    }
+  ],
+  "evidence_policy": {
+    "author_reported_measurement": "Numerical value transcribed from an author table and described as an experimental rate.",
+    "author_reported_model_parameter": "Numerical value used by the authors for a simulation; not necessarily independently measured.",
+    "author_reported_model_estimate": "Estimated parameter in the authors' mechanistic model.",
+    "digitized_from_published_raster": "Approximate value recovered from a raster figure; suitable for EDA and weak calibration constraints, not a substitute for raw data."
+  },
+  "known_limitations": [
+    "The repository does not contain raw FCS files or author-supplied point-level pSTAT6 tables.",
+    "Digitized bar heights omit the plotted dispersion bars because their statistical definition is not stated in the main-figure legend.",
+    "The Figure 7D ligand concentration is not stated in the main-figure legend and is left missing rather than inferred.",
+    "C4, D7, and C10 kinetic rates in Table 2 are model-scenario values: the paper states that koff was calculated from measured KD and a common kon was imposed.",
+    "Derived KD and residence half-life values are transformations, not additional observations."
+  ]
+}
