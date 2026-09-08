@@ -1,0 +1,11 @@
+record_id,variant,parameter_set,kon_M_inv_s,koff_s_inv,kd_nM,source_locator,evidence_class,notes
+table3_WT,WT,table3_measured_rates,5210000,0.022,4.222649,Table 3,author_reported_measurement,Association and dissociation rate constants reported by Moraga et al.; KD derived as koff/kon.
+table3_A7,A7,table3_measured_rates,2900000,0.0034,1.172414,Table 3,author_reported_measurement,Association and dissociation rate constants reported by Moraga et al.; KD derived as koff/kon.
+table3_B4,B4,table3_measured_rates,1360000,0.024,17.64706,Table 3,author_reported_measurement,Association and dissociation rate constants reported by Moraga et al.; KD derived as koff/kon.
+table3_A11,A11,table3_measured_rates,16400000,0.0013,0.07926829,Table 3,author_reported_measurement,Association and dissociation rate constants reported by Moraga et al.; KD derived as koff/kon.
+table3_A6,A6,table3_measured_rates,1770000,0.0033,1.864407,Table 3,author_reported_measurement,Association and dissociation rate constants reported by Moraga et al.; KD derived as koff/kon.
+table2_WT,WT,table2_model_scenario,1000000,0.02,20,Table 2,author_reported_model_parameter,Simplified rate used in the published simulation scenario.
+table2_C4,C4,table2_model_scenario,1000000,150,150000,Table 2,author_reported_model_parameter,No measured rate constant was available; the paper derived koff from measured KD and imposed a common kon.
+table2_D7,D7,table2_model_scenario,1000000,20,20000,Table 2,author_reported_model_parameter,No measured rate constant was available; the paper derived koff from measured KD and imposed a common kon.
+table2_C10,C10,table2_model_scenario,1000000,1,1000,Table 2,author_reported_model_parameter,No measured rate constant was available; the paper derived koff from measured KD and imposed a common kon.
+table2_A11,A11,table2_model_scenario,1000000,0.0004,0.4,Table 2,author_reported_model_parameter,Simplified rate used in the published simulation scenario.
