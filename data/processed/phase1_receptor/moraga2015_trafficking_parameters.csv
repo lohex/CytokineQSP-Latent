@@ -1,0 +1,5 @@
+parameter,value,unit,source_locator,evidence_class,notes
+k_endo,0.003,s^-1,Table 1,author_reported_model_estimate,Estimated endocytosis rate.
+k_deg,0.00006,s^-1,Table 1,author_reported_model_estimate,Estimated endosomal degradation rate.
+k_rec,0.00065,s^-1,Table 1,author_reported_model_estimate,Estimated recycling rate.
+cR13_start,1,pM,Table 1,author_reported_model_initial_condition,Initial IL-13Ralpha1 concentration in the published model.
